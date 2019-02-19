@@ -6,7 +6,8 @@ target 'MDBSocials' do
   use_frameworks!
 
   # Pods for MDBSocials
-  pod "Firebase/Core"
+  pod 'Firebase/Core'
+  pod 'FirebaseUI'
 
   target 'MDBSocialsUITests' do
     inherit! :search_paths
