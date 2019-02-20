@@ -7,6 +7,7 @@ target 'MDBSocials' do
 
   # Pods for MDBSocials
   pod "Firebase/Core"
+  pod "Firebase/Auth":
   pod "Firebase/Database"
   pod "FirebaseUI"
 
