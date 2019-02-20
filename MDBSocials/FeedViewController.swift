@@ -9,6 +9,8 @@
 import UIKit
 
 class FeedViewController: UIViewController {
+    
+    var tableView : UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
