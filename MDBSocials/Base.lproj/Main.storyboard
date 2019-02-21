@@ -74,8 +74,8 @@
                         <viewLayoutGuide key="safeArea" id="a5R-rc-aHa"/>
                     </view>
                     <connections>
-                        <segue destination="F5g-fQ-suK" kind="show" id="aRf-eq-bjw"/>
-                        <segue destination="Ary-i7-Qs5" kind="show" id="tBQ-B2-m3L"/>
+                        <segue destination="F5g-fQ-suK" kind="show" identifier="toDetailsVC" id="aRf-eq-bjw"/>
+                        <segue destination="Ary-i7-Qs5" kind="show" identifier="toNewVC" id="tBQ-B2-m3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2L-6V-z60" userLabel="First Responder" sceneMemberID="firstResponder"/>
