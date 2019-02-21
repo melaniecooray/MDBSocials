@@ -22,6 +22,10 @@
 		8C422A22221E53D8008A87F5 /* FeedViewController-TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A21221E53D8008A87F5 /* FeedViewController-TableView.swift */; };
 		8C422A25221E541B008A87F5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A24221E541B008A87F5 /* FeedCell.swift */; };
 		8C422A2B221E8E29008A87F5 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8C422A2A221E8E29008A87F5 /* Base.lproj */; };
+		8C422A2D221EA813008A87F5 /* SignupViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A2C221EA813008A87F5 /* SignupViewController-UI.swift */; };
+		8C422A2F221EA93A008A87F5 /* LoginViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A2E221EA93A008A87F5 /* LoginViewController-UI.swift */; };
+		8C422A31221EAB9A008A87F5 /* DetailViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A30221EAB9A008A87F5 /* DetailViewController-UI.swift */; };
+		8C422A33221EB428008A87F5 /* NewSocialViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A32221EB428008A87F5 /* NewSocialViewController-UI.swift */; };
 		8CC842AA221DEA8D00DF42B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC842A9221DEA8D00DF42B7 /* Constants.swift */; };
 		E2D09815C677D37A5FE37455 /* Pods_MDBSocialsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1874753C9F1AE97C27F4C04 /* Pods_MDBSocialsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +61,10 @@
 		8C422A21221E53D8008A87F5 /* FeedViewController-TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController-TableView.swift"; sourceTree = "<group>"; };
 		8C422A24221E541B008A87F5 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		8C422A2A221E8E29008A87F5 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		8C422A2C221EA813008A87F5 /* SignupViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewController-UI.swift"; sourceTree = "<group>"; };
+		8C422A2E221EA93A008A87F5 /* LoginViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController-UI.swift"; sourceTree = "<group>"; };
+		8C422A30221EAB9A008A87F5 /* DetailViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController-UI.swift"; sourceTree = "<group>"; };
+		8C422A32221EB428008A87F5 /* NewSocialViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocialViewController-UI.swift"; sourceTree = "<group>"; };
 		8CC842A9221DEA8D00DF42B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B1874753C9F1AE97C27F4C04 /* Pods_MDBSocialsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocialsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B76BDAC63C5D2CAF221765 /* Pods_MDBSocials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4BBA31221DF2BE00542C10 /* NewSocialViewController.swift */,
+				8C422A32221EB428008A87F5 /* NewSocialViewController-UI.swift */,
 			);
 			path = NewSocialViewController;
 			sourceTree = "<group>";
@@ -171,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4BBA2F221DF27100542C10 /* DetailViewController.swift */,
+				8C422A30221EAB9A008A87F5 /* DetailViewController-UI.swift */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -179,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				7B97052422152572007D805C /* LoginViewController.swift */,
+				8C422A2E221EA93A008A87F5 /* LoginViewController-UI.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				7B970575221A0533007D805C /* SignupViewController.swift */,
+				8C422A2C221EA813008A87F5 /* SignupViewController-UI.swift */,
 			);
 			path = SignupViewController;
 			sourceTree = "<group>";
@@ -490,10 +502,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C422A31221EAB9A008A87F5 /* DetailViewController-UI.swift in Sources */,
 				8C422A22221E53D8008A87F5 /* FeedViewController-TableView.swift in Sources */,
+				8C422A2F221EA93A008A87F5 /* LoginViewController-UI.swift in Sources */,
+				8C422A33221EB428008A87F5 /* NewSocialViewController-UI.swift in Sources */,
 				8C422A25221E541B008A87F5 /* FeedCell.swift in Sources */,
 				8CC842AA221DEA8D00DF42B7 /* Constants.swift in Sources */,
 				8C422A20221E5354008A87F5 /* FeedViewController-UI.swift in Sources */,
+				8C422A2D221EA813008A87F5 /* SignupViewController-UI.swift in Sources */,
 				7B970576221A0533007D805C /* SignupViewController.swift in Sources */,
 				7B97052522152572007D805C /* LoginViewController.swift in Sources */,
 				7B4BBA32221DF2BE00542C10 /* NewSocialViewController.swift in Sources */,

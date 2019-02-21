@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         let authUI = FUIAuth.defaultAuthUI()
         //
-        authUI.delegate = self
+        authUI?.delegate = self as! FUIAuthDelegate
         return true
     }
 

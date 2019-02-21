@@ -11,20 +11,25 @@ import UIKit
 extension FeedViewController {
 
     func initUI() {
+        self.title = "Feed"
+        self.navigationController?.navigationBar.tintColor = Constants.orange
+        
         setupTableView()
         setupSignOutButton()
         setupAddEventButton()
     }
     
     func setupTableView() {
-        tableView = UITableView(frame: CGRect(x: 0, y: viewSelect.frame.maxY, width: view.frame.width, height: view.frame.height - 30))
+        tableView = UITableView(frame: CGRect(x: 0, y: 30, width: view.frame.width, height: view.frame.height - 30))
         tableView.register(FeedCell.self,forCellReuseIdentifier: "feedCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .blue;
     }
     
     func setupSignOutButton() {
-        
+        signOutButton = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut))
+        self.navigationItem.rightBarButtonItem = signOutButton
     }
     
     func setupAddEventButton() {
@@ -36,8 +41,13 @@ extension FeedViewController {
         view.addSubview(addEventButton)
     }
     
+    @objc func signOut() {
+        
+    }
+    
     @objc func toNew() {
         self.performSegue(withIdentifier: "toNewVC", sender: self)
     }
+    
 
 }

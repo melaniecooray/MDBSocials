@@ -14,7 +14,7 @@ class FeedViewController: UIViewController {
     var cellSize : CGSize!
     
     var addEventButton : UIButton!
-    var signOutButton: UIButton!
+    var signOutButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
