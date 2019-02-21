@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -44,11 +45,15 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
     @objc func datePickerValueChanged(_ sender: UIDatePicker){
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
-        let selectedDate: String = dateFormatter.string(from: sender.date)
+        selectedDate = dateFormatter.string(from: sender.date)
         print("Selected value \(selectedDate)")
     }
     
     @objc func addToFeed() {
         print(selectedDate)
+        let db = Database.database().reference()
+        let eventNode = db.child("events")
+        let eventID = eventNode.childByAutoId().key
+        db.child("events").child(eventID!).setValue(["name" : nameOfEvent.text, "description" : eventDescription.text, "date" : selectedDate, "interested" : 1, "host" : Auth.auth().currentUser?.displayName])
     }
 }

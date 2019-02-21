@@ -21,7 +21,7 @@ extension LoginViewController {
     func displayUsername() {
         userName = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 50))
         userName.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
-        userName.placeholder = " Username"
+        userName.placeholder = " Email"
         userName.layer.cornerRadius = 15
         userName.backgroundColor = .white
         view.addSubview(userName)
