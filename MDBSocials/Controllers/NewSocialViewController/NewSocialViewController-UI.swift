@@ -11,6 +11,8 @@ import UIKit
 extension NewSocialViewController {
 
     func initUI() {
+        self.navigationItem.title = "Create Social"
+        self.navigationController?.navigationBar.tintColor = Constants.orange
         displayTitle()
         displayDescription()
         setUpDatePicker()

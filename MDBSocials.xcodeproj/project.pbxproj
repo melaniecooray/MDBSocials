@@ -67,6 +67,7 @@
 		8C422A30221EAB9A008A87F5 /* DetailViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController-UI.swift"; sourceTree = "<group>"; };
 		8C422A32221EB428008A87F5 /* NewSocialViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocialViewController-UI.swift"; sourceTree = "<group>"; };
 		8C422A36221F33FA008A87F5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MDBSocials/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		8C422A38221F44C9008A87F5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CC842A9221DEA8D00DF42B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B1874753C9F1AE97C27F4C04 /* Pods_MDBSocialsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocialsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B76BDAC63C5D2CAF221765 /* Pods_MDBSocials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +134,7 @@
 				8CC842A2221DE9DB00DF42B7 /* Controllers */,
 				7B97052222152572007D805C /* AppDelegate.swift */,
 				8C422A36221F33FA008A87F5 /* Main.storyboard */,
+				8C422A38221F44C9008A87F5 /* LaunchScreen.storyboard */,
 				7B97054422152C59007D805C /* GoogleService-Info.plist */,
 				7B97052E22152575007D805C /* Info.plist */,
 			);

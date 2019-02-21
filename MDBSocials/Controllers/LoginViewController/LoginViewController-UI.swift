@@ -21,7 +21,7 @@ extension LoginViewController {
     func displayUsername() {
         userName = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 50))
         userName.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
-        userName.placeholder = "Username"
+        userName.placeholder = " Username"
         userName.layer.cornerRadius = 15
         userName.backgroundColor = .white
         view.addSubview(userName)
@@ -30,7 +30,7 @@ extension LoginViewController {
     func displayPassword() {
         password = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 50))
         password.center = CGPoint(x: view.frame.width/2, y: userName.frame.maxY + 50)
-        password.placeholder = "Password"
+        password.placeholder = " Password (>6 characters)"
         password.layer.cornerRadius = 15
         password.backgroundColor = .white
         password.isSecureTextEntry = true
