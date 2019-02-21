@@ -8,17 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6609CF301C7AFD66A450CB2B /* Pods_MDBSocials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B76BDAC63C5D2CAF221765 /* Pods_MDBSocials.framework */; };
-		7B4BBA2E221CB15B00542C10 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BBA2D221CB15B00542C10 /* FeedViewController.swift */; };
-		7B4BBA30221DF27100542C10 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BBA2F221DF27100542C10 /* DetailViewController.swift */; };
-		7B4BBA32221DF2BE00542C10 /* NewSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BBA31221DF2BE00542C10 /* NewSocialViewController.swift */; };
+		7B4BBA36221E818200542C10 /* Controllers in Resources */ = {isa = PBXBuildFile; fileRef = 7B4BBA35221E818200542C10 /* Controllers */; };
+		7B4BBA38221E819D00542C10 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7B4BBA37221E819D00542C10 /* Base.lproj */; };
 		7B97052322152572007D805C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97052222152572007D805C /* AppDelegate.swift */; };
-		7B97052522152572007D805C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97052422152572007D805C /* LoginViewController.swift */; };
-		7B97052822152572007D805C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B97052622152572007D805C /* Main.storyboard */; };
-		7B97052A22152575007D805C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B97052922152575007D805C /* Assets.xcassets */; };
-		7B97052D22152575007D805C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B97052B22152575007D805C /* LaunchScreen.storyboard */; };
 		7B97053822152575007D805C /* MDBSocialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97053722152575007D805C /* MDBSocialsUITests.swift */; };
 		7B97054522152C59007D805C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B97054422152C59007D805C /* GoogleService-Info.plist */; };
-		7B970576221A0533007D805C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B970575221A0533007D805C /* SignupViewController.swift */; };
 		E2D09815C677D37A5FE37455 /* Pods_MDBSocialsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1874753C9F1AE97C27F4C04 /* Pods_MDBSocialsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,21 +30,17 @@
 		05CC21274A7C06A5ECC33BA2 /* Pods-MDBSocials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDBSocials.release.xcconfig"; path = "Target Support Files/Pods-MDBSocials/Pods-MDBSocials.release.xcconfig"; sourceTree = "<group>"; };
 		0E1B41C5A2FF96EFF3CC9B5F /* Pods-MDBSocialsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDBSocialsUITests.debug.xcconfig"; path = "Target Support Files/Pods-MDBSocialsUITests/Pods-MDBSocialsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		45E296B9E2F829FF85A90CED /* Pods-MDBSocialsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDBSocialsUITests.release.xcconfig"; path = "Target Support Files/Pods-MDBSocialsUITests/Pods-MDBSocialsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7B4BBA2D221CB15B00542C10 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		7B4BBA2F221DF27100542C10 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		7B4BBA31221DF2BE00542C10 /* NewSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialViewController.swift; sourceTree = "<group>"; };
+		7B302601221E876000B6AE29 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7B302602221E876000B6AE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B4BBA35221E818200542C10 /* Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controllers; sourceTree = "<group>"; };
+		7B4BBA37221E819D00542C10 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		7B97051F22152572007D805C /* MDBSocials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBSocials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B97052222152572007D805C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B97052422152572007D805C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		7B97052722152572007D805C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B97052922152575007D805C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7B97052C22152575007D805C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B97052E22152575007D805C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B97053322152575007D805C /* MDBSocialsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDBSocialsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B97053722152575007D805C /* MDBSocialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDBSocialsUITests.swift; sourceTree = "<group>"; };
 		7B97053922152575007D805C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B97054422152C59007D805C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7B970575221A0533007D805C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B1874753C9F1AE97C27F4C04 /* Pods_MDBSocialsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocialsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B76BDAC63C5D2CAF221765 /* Pods_MDBSocials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8B09292FF273BB79129546 /* Pods-MDBSocials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDBSocials.debug.xcconfig"; path = "Target Support Files/Pods-MDBSocials/Pods-MDBSocials.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +77,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7B3025FF221E876000B6AE29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B302600221E876000B6AE29 /* Constants */,
+				7B302602221E876000B6AE29 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B302600221E876000B6AE29 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7B302601221E876000B6AE29 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		7B97051622152572007D805C = {
 			isa = PBXGroup;
 			children = (
@@ -111,14 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				7B97052222152572007D805C /* AppDelegate.swift */,
-				7B97052422152572007D805C /* LoginViewController.swift */,
-				7B970575221A0533007D805C /* SignupViewController.swift */,
-				7B97052622152572007D805C /* Main.storyboard */,
-				7B4BBA31221DF2BE00542C10 /* NewSocialViewController.swift */,
-				7B4BBA2F221DF27100542C10 /* DetailViewController.swift */,
-				7B4BBA2D221CB15B00542C10 /* FeedViewController.swift */,
-				7B97052922152575007D805C /* Assets.xcassets */,
-				7B97052B22152575007D805C /* LaunchScreen.storyboard */,
+				7B4BBA35221E818200542C10 /* Controllers */,
+				7B3025FF221E876000B6AE29 /* Resources */,
+				7B4BBA37221E819D00542C10 /* Base.lproj */,
 				7B97054422152C59007D805C /* GoogleService-Info.plist */,
 				7B97052E22152575007D805C /* Info.plist */,
 			);
@@ -227,10 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B97052D22152575007D805C /* LaunchScreen.storyboard in Resources */,
+				7B4BBA36221E818200542C10 /* Controllers in Resources */,
 				7B97054522152C59007D805C /* GoogleService-Info.plist in Resources */,
-				7B97052A22152575007D805C /* Assets.xcassets in Resources */,
-				7B97052822152572007D805C /* Main.storyboard in Resources */,
+				7B4BBA38221E819D00542C10 /* Base.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,11 +320,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B970576221A0533007D805C /* SignupViewController.swift in Sources */,
-				7B97052522152572007D805C /* LoginViewController.swift in Sources */,
-				7B4BBA32221DF2BE00542C10 /* NewSocialViewController.swift in Sources */,
-				7B4BBA30221DF27100542C10 /* DetailViewController.swift in Sources */,
-				7B4BBA2E221CB15B00542C10 /* FeedViewController.swift in Sources */,
 				7B97052322152572007D805C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,25 +341,6 @@
 			targetProxy = 7B97053422152575007D805C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7B97052622152572007D805C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B97052722152572007D805C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7B97052B22152575007D805C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B97052C22152575007D805C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7B97053A22152575007D805C /* Debug */ = {
