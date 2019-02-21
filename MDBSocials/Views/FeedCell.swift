@@ -32,20 +32,21 @@ class FeedCell: UITableViewCell {
         self.size = size
         
         eventImage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.size.width - 100, height: self.size.width - 100))
-        eventImage.center = CGPoint(x: self.size.width / 2, y: self.size.width / 2 + 25)
+        eventImage.center = CGPoint(x: self.size.width / 2, y: eventImage.frame.height / 2 + 50)
+        eventImage.image = UIImage(named: "pleasemyson")
         contentView.addSubview(eventImage)
         
-        eventName = UILabel(frame: CGRect(x: eventImage.frame.minX, y: eventImage.frame.maxY + 5, width: self.size.width - 50, height: 12))
+        eventName = UILabel(frame: CGRect(x: eventImage.frame.minX, y: eventImage.frame.maxY + 10, width: self.size.width - 50, height: 20))
         eventName.text = "EVENT NAME FROM DATABASE"
         eventName.textAlignment = .left
         contentView.addSubview(eventName)
         
-        posterName = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY, width: self.size.width - 50, height: 18))
+        posterName = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY + 10, width: self.size.width - 50, height: 20))
         posterName.text = "NAME OF POSTER"
         posterName.textAlignment = .left
         contentView.addSubview(posterName)
         
-        numRSVP = UILabel(frame: CGRect(x: eventImage.frame.maxX - 100, y: eventImage.frame.maxY + 5, width: 150, height: 20))
+        numRSVP = UILabel(frame: CGRect(x: eventImage.frame.maxX - 100, y: eventImage.frame.maxY + 20, width: 150, height: 20))
         numRSVP.text = "INTERESTED: ?"
         contentView.addSubview(numRSVP)
         

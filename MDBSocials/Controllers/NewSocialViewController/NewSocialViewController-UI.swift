@@ -11,6 +11,8 @@ import UIKit
 extension NewSocialViewController {
 
     func initUI() {
+        self.navigationItem.title = "Create Social"
+        self.navigationController?.navigationBar.tintColor = Constants.orange
         displayTitle()
         displayDescription()
         displayImageButton()
@@ -36,7 +38,7 @@ extension NewSocialViewController {
     
     func displayImageButton() {
         imageButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width/2, height: 35))
-        imageButton.center = CGPoint(x: view.frame.width/2, y: datePicker.frame.maxY + 50)
+        //imageButton.center = CGPoint(x: view.frame.width/2, y: datePicker.frame.maxY + 50)
         imageButton.setTitle("Sign Up", for: .normal)
         imageButton.layer.cornerRadius = 15
         imageButton.setTitleColor(.black, for: .normal)

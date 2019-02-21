@@ -27,8 +27,7 @@ class SignupViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        initUI();
-        registerUser()
+        initUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {

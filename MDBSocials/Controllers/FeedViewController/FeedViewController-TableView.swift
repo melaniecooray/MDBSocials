@@ -11,7 +11,7 @@ import UIKit
 extension FeedViewController : UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        self.cellSize = CGSize(width: view.frame.width - 50, height: view.frame.width - 50)
+        self.cellSize = CGSize(width: view.frame.width, height: view.frame.width + 200)
         return self.cellSize.height
     }
     
@@ -25,7 +25,7 @@ extension FeedViewController : UITableViewDataSource, UITableViewDelegate  {
             view.removeFromSuperview()
         }
         cell.awakeFromNib()
-        cell.initCellFrom(size: self.cellSize)
+        cell.initCellFrom(size: CGSize(width: view.frame.width, height: view.frame.width + 200))
         //event = read event from database
         //cell.updateEvent(to: socialEvent)
         return cell

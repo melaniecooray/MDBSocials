@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
         //FirebaseApp.configure()
         
         initUI()
-        loginUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {
