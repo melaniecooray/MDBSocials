@@ -23,4 +23,8 @@ class FeedViewController: UIViewController {
 
         initUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }

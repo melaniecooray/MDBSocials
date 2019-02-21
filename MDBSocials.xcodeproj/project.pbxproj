@@ -128,10 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8C422A2A221E8E29008A87F5 /* Base.lproj */,
-				8CC842A7221DEA1600DF42B7 /* Models */,
 				8CC842A6221DEA0E00DF42B7 /* Resources */,
-				8CC842A5221DEA0600DF42B7 /* Clients */,
-				8CC842A4221DE9FC00DF42B7 /* Helpers */,
 				8CC842A3221DE9E800DF42B7 /* Views */,
 				8CC842A2221DE9DB00DF42B7 /* Controllers */,
 				7B97052222152572007D805C /* AppDelegate.swift */,
@@ -226,20 +223,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8CC842A4221DE9FC00DF42B7 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		8CC842A5221DEA0600DF42B7 /* Clients */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Clients;
-			sourceTree = "<group>";
-		};
 		8CC842A6221DEA0E00DF42B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,13 +230,6 @@
 				8CC842A8221DEA5100DF42B7 /* Constants */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		8CC842A7221DEA1600DF42B7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		8CC842A8221DEA5100DF42B7 /* Constants */ = {
