@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedViewController: UIViewController {
     
@@ -26,5 +27,15 @@ class FeedViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    func getData() {
+        let db = Database.database().reference()
+        let topNode = db.child("events")
+        topNode.observe(.value, with: { (snapshot) in
+            for event in snapshot.children {
+                
+            }
+            })
     }
 }
