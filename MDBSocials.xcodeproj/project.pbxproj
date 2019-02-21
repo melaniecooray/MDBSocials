@@ -95,6 +95,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7B3025FF221E876000B6AE29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B302600221E876000B6AE29 /* Constants */,
+				7B302602221E876000B6AE29 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B302600221E876000B6AE29 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7B302601221E876000B6AE29 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		7B97051622152572007D805C = {
 			isa = PBXGroup;
 			children = (
@@ -336,7 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B97052D22152575007D805C /* LaunchScreen.storyboard in Resources */,
+				7B4BBA36221E818200542C10 /* Controllers in Resources */,
 				7B97054522152C59007D805C /* GoogleService-Info.plist in Resources */,
 				8C422A1D221E0F2A008A87F5 /* Assets.xcassets in Resources */,
 				7B97052822152572007D805C /* Main.storyboard in Resources */,
@@ -522,25 +539,6 @@
 			targetProxy = 7B97053422152575007D805C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7B97052622152572007D805C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B97052722152572007D805C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7B97052B22152575007D805C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B97052C22152575007D805C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7B97053A22152575007D805C /* Debug */ = {
