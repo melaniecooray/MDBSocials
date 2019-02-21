@@ -33,8 +33,8 @@ extension FeedViewController {
     }
     
     func setupAddEventButton() {
-        addEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        addEventButton.center = CGPoint(x: view.frame.width / 2, y: view.frame.height - 100)
+        addEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
+        addEventButton.center = CGPoint(x: view.frame.width / 2, y: view.frame.height - 75)
         addEventButton.layer.cornerRadius = 0.5 * addEventButton.bounds.size.width
         addEventButton.backgroundColor = Constants.orange
         addEventButton.addTarget(self, action: #selector(toNew), for: .touchUpInside)

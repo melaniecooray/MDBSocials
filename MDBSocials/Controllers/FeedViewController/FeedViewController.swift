@@ -15,6 +15,8 @@ class FeedViewController: UIViewController {
     
     var addEventButton : UIButton!
     var signOutButton: UIBarButtonItem!
+    
+    var userID : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()

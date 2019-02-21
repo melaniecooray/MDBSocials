@@ -30,7 +30,7 @@ extension DetailViewController {
         interestButton.backgroundColor = Constants.orange
         //UIButton notSelected = UIButton(frame: CGRect(x: interestButton.frame.minX + 10, y: interestButton.frame.midY + 15))  MAKE CHECKABLE
         
-        interestButton.setImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControl.State#>)
+        //interestButton.setImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControl.State#>)
         interestButton.layer.cornerRadius = 0.5
         view.addSubview(interestButton)
         

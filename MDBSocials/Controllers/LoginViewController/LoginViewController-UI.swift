@@ -54,11 +54,12 @@ extension LoginViewController {
         loginButton.setTitle("Login", for: .normal)
         loginButton.layer.cornerRadius = 15
         loginButton.backgroundColor = .blue
+        loginButton.addTarget(self, action: #selector(loginUser), for: .touchUpInside)
         view.addSubview(loginButton)
     }
     
     @objc func toSignUp() {
-        performSegue(withIdentifier: "toSignUp", sender: self)
+        performSegue(withIdentifier: "toSignUpVC", sender: self)
     }
 
 }

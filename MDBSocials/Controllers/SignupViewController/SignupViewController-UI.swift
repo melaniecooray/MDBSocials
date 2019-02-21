@@ -11,11 +11,12 @@ import UIKit
 extension SignupViewController {
 
     func initUI() {
-        self.view.backgroundColor = UIColor(red: 135/255, green: 206/255, blue: 250/255, alpha: 1)
+        self.view.backgroundColor = Constants.blue
         displayFullName()
         displayEmail()
         displayUsername()
         displayPassword()
+        displaySignupButton()
     }
     
     func displayFullName() {
@@ -52,5 +53,15 @@ extension SignupViewController {
         password.layer.cornerRadius = 15
         password.backgroundColor = .white
         view.addSubview(password)
+    }
+    
+    func displaySignupButton() {
+        signupButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width - 200, height: 100))
+        signupButton.center = CGPoint(x: password.frame.midX, y: password.frame.maxY + 75)
+        signupButton.backgroundColor = Constants.orange
+        signupButton.setTitle("Create Account", for: .normal)
+        signupButton.layer.cornerRadius = 0.5
+        signupButton.addTarget(self, action: #selector(registerUser), for: .touchUpInside)
+        view.addSubview(signupButton)
     }
 }

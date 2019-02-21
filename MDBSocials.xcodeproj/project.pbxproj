@@ -26,6 +26,7 @@
 		8C422A2F221EA93A008A87F5 /* LoginViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A2E221EA93A008A87F5 /* LoginViewController-UI.swift */; };
 		8C422A31221EAB9A008A87F5 /* DetailViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A30221EAB9A008A87F5 /* DetailViewController-UI.swift */; };
 		8C422A33221EB428008A87F5 /* NewSocialViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C422A32221EB428008A87F5 /* NewSocialViewController-UI.swift */; };
+		8C422A37221F3407008A87F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C422A36221F33FA008A87F5 /* Main.storyboard */; };
 		8CC842AA221DEA8D00DF42B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC842A9221DEA8D00DF42B7 /* Constants.swift */; };
 		E2D09815C677D37A5FE37455 /* Pods_MDBSocialsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1874753C9F1AE97C27F4C04 /* Pods_MDBSocialsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		8C422A2E221EA93A008A87F5 /* LoginViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController-UI.swift"; sourceTree = "<group>"; };
 		8C422A30221EAB9A008A87F5 /* DetailViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController-UI.swift"; sourceTree = "<group>"; };
 		8C422A32221EB428008A87F5 /* NewSocialViewController-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocialViewController-UI.swift"; sourceTree = "<group>"; };
+		8C422A36221F33FA008A87F5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MDBSocials/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		8CC842A9221DEA8D00DF42B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B1874753C9F1AE97C27F4C04 /* Pods_MDBSocialsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocialsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B76BDAC63C5D2CAF221765 /* Pods_MDBSocials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDBSocials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				8CC842A3221DE9E800DF42B7 /* Views */,
 				8CC842A2221DE9DB00DF42B7 /* Controllers */,
 				7B97052222152572007D805C /* AppDelegate.swift */,
+				8C422A36221F33FA008A87F5 /* Main.storyboard */,
 				7B97054422152C59007D805C /* GoogleService-Info.plist */,
 				7B97052E22152575007D805C /* Info.plist */,
 			);
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B97054522152C59007D805C /* GoogleService-Info.plist in Resources */,
+				8C422A37221F3407008A87F5 /* Main.storyboard in Resources */,
 				8C422A1D221E0F2A008A87F5 /* Assets.xcassets in Resources */,
 				8C422A2B221E8E29008A87F5 /* Base.lproj in Resources */,
 				7B97052822152572007D805C /* (null) in Resources */,

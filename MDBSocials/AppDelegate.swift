@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        let authUI = FUIAuth.defaultAuthUI()
+        //let static authUI = Auth().auth
         //
-        authUI?.delegate = self as! FUIAuthDelegate
+        //authUI?.delegate = self as! FUIAuthDelegate
         return true
     }
 

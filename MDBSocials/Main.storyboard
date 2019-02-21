@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,7 +37,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Bo-uy-EN4"/>
                     <connections>
-                        <segue destination="WDX-UI-zIL" kind="show" identifier="toSignUp" id="hid-z0-ghr"/>
+                        <segue destination="WDX-UI-zIL" kind="show" identifier="toSignUpVC" id="hid-z0-ghr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -56,7 +55,7 @@
                         <viewLayoutGuide key="safeArea" id="6Oj-kZ-LgL"/>
                     </view>
                     <connections>
-                        <segue destination="fwI-mu-P6K" kind="show" id="9w3-NN-tjN"/>
+                        <segue destination="fwI-mu-P6K" kind="show" identifier="toFeedVC" id="9w3-NN-tjN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bs-wO-LKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
