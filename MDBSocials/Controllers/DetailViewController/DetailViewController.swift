@@ -29,6 +29,7 @@ class DetailViewController: UIViewController {
     }
     
     @objc func markInterested() {
+        interestButton.setTitleColor(.gray, for: .disabled)
         var dict = event.value as! [String : Any]
         let db = Database.database().reference()
         var update = dict["interested"] as! Int

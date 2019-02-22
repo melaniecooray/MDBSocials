@@ -90,7 +90,7 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
         let eventNode = db.child("events")
         let eventID = eventNode.childByAutoId().key
         
-        db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser?.displayName, "eventID" : eventID])
+        db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser?.uid, "eventID" : eventID])
         //db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser().Name])
         
         let storage = Storage.storage().reference()

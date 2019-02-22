@@ -48,7 +48,7 @@ class FeedCell: UITableViewCell {
         //posterName = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY + 10, width: self.size.width - 50, height: 40))
         //posterName.textAlignment = .left
         //posterName.text = "By: Guy Fieri"
-        //posterName.font = UIFont(name: "Avenir-Light", size: 30)
+        //posterName.font = UIFont(name: "Avenir-Light", size: 20)
         //contentView.addSubview(posterName)
         
         dateLabel = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY + 10, width: self.size.width - 50, height: 40))
@@ -73,12 +73,22 @@ class FeedCell: UITableViewCell {
     }
     
     func updateEvent(to socialEvent : DataSnapshot) {
+        let db = Database.database().reference()
         let dict = socialEvent.value as! [String : Any]
         eventName.text = dict["name"] as! String
         //posterName.text = "Melanie"
         dateLabel.text = dict["date"] as! String
         let interested = dict["interested"]!
         numRSVP.text = "\(interested)"
+        
+        let userID = dict["host"]
+        //let userNode = db.child("users").child(userID as! String)
+        
+        //userNode.observe(.value) { (snapshot) in
+        //    let dict = snapshot.value as! [String : Any]
+        //    let usersName = dict["Name"]
+        //    self.posterName.text = dict["Name"] as! String
+        //}
         
         let storage = Storage.storage().reference()
         let name = dict["name"] as! String
