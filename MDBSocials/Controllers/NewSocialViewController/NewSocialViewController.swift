@@ -22,8 +22,6 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         initUI()
         setUpImagePicker()
     }
@@ -85,13 +83,24 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
         db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser?.displayName])
         
         let storage = Storage.storage().reference()
+        if let data = image.jpegData(compressionQuality: 0.4) {
+            storage.child("\(eventName).jpeg").putData(data, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    self.showError(title: "Error:", message: "Could not upload image.")
+                    return
+                }
+                print(metadata)
+            })
+        }
+        
+        /*
         let data = image.jpegData(compressionQuality: 0.4)
         storage.child("images").putData(data!, metadata: nil) { (data, error) in
             if error != nil {
                 self.showError(title: "Error:", message: "Could not upload image.")
             }
         }
-        
+        */
         self.performSegue(withIdentifier: "addedEvent", sender: self)
     }
     

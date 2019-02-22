@@ -12,12 +12,15 @@ import Firebase
 extension FeedViewController {
 
     func initUI() {
-        self.navigationItem.title = "Feed"
-        self.navigationController?.navigationBar.tintColor = Constants.orange
-        
+        setupNavBar()
         setupTableView()
         setupSignOutButton()
         setupAddEventButton()
+    }
+    
+    func setupNavBar() {
+        self.navigationItem.title = "Feed"
+        self.navigationController?.navigationBar.tintColor = Constants.orange
     }
     
     func setupTableView() {
@@ -37,7 +40,7 @@ extension FeedViewController {
     
     func setupAddEventButton() {
         addEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
-        addEventButton.center = CGPoint(x: view.frame.width / 2, y: view.frame.height - 75)
+        addEventButton.center = CGPoint(x: view.frame.width / 2, y: view.frame.height - 65)
         addEventButton.layer.cornerRadius = 0.5 * addEventButton.bounds.size.width
         addEventButton.backgroundColor = Constants.orange
         addEventButton.addTarget(self, action: #selector(toNew), for: .touchUpInside)

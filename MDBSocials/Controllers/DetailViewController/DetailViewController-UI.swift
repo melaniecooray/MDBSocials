@@ -11,13 +11,17 @@ import UIKit
 extension DetailViewController {
 
     func initUI() {
-        self.navigationItem.title = "Details"
-        self.navigationController?.navigationBar.tintColor = Constants.orange
+        setupNavBar()
         setupImage()
         setupInterested()
         setupEventName()
         setupPosterName()
         setupEventDescription()
+    }
+    
+    func setupNavBar() {
+        self.navigationItem.title = "Details"
+        self.navigationController?.navigationBar.tintColor = Constants.orange
     }
     
     func setupImage() {

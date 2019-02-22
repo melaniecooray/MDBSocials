@@ -12,7 +12,7 @@ import Firebase
 extension FeedViewController : UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        self.cellSize = CGSize(width: view.frame.width, height: view.frame.width + 200)
+        self.cellSize = CGSize(width: view.frame.width, height: view.frame.width + 140)
         return self.cellSize.height
     }
     
