@@ -19,7 +19,7 @@ class FeedViewController: UIViewController {
     
     var userID : String!
     
-    var socialEvent : DatabaseReference!
+    var socialEvent : DataSnapshot!
     var eventCount = 0
 
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class FeedViewController: UIViewController {
             for event in snapshot.children {
                 print("hi")
                 self.eventCount += 1
-                self.socialEvent = event as? DatabaseReference
+                self.socialEvent = event as! DataSnapshot
             }
             self.initUI()
         })
