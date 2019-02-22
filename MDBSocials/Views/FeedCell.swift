@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedCell: UITableViewCell {
     
@@ -37,19 +38,24 @@ class FeedCell: UITableViewCell {
         contentView.addSubview(eventImage)
         
         eventName = UILabel(frame: CGRect(x: eventImage.frame.minX, y: eventImage.frame.maxY + 10, width: self.size.width - 50, height: 20))
-        eventName.text = "EVENT NAME FROM DATABASE"
         eventName.textAlignment = .left
         contentView.addSubview(eventName)
         
         posterName = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY + 10, width: self.size.width - 50, height: 20))
-        posterName.text = "NAME OF POSTER"
         posterName.textAlignment = .left
         contentView.addSubview(posterName)
         
         numRSVP = UILabel(frame: CGRect(x: eventImage.frame.maxX - 100, y: eventImage.frame.maxY + 20, width: 150, height: 20))
-        numRSVP.text = "INTERESTED: ?"
         contentView.addSubview(numRSVP)
         
+    }
+    
+    func updateEvent(to socialEvent : DatabaseReference) {
+        print("sup")
+        eventName.text = socialEvent.value(forKey: "name") as? String
+        posterName.text = socialEvent.value(forKey: "host") as? String
+        let interested = socialEvent.value(forKey: "interested") as? String
+        numRSVP.text = "Interested: \(interested)"
     }
 
 }
