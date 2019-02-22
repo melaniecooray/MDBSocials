@@ -16,6 +16,7 @@ class FeedCell: UITableViewCell {
     var eventImage : UIImageView!
     var eventName : UILabel!
     var posterName : UILabel!
+    var dateLabel : UILabel!
     var numRSVP : UILabel!
 
     override func awakeFromNib() {

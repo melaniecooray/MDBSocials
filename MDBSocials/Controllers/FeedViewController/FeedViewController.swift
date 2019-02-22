@@ -19,8 +19,10 @@ class FeedViewController: UIViewController {
     
     var userID : String!
     
-    var socialEvent : DataSnapshot!
+    var socialEvent : [DataSnapshot] = []
+    var dates : [String] = []
     var eventCount = 0
+    var index = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +32,20 @@ class FeedViewController: UIViewController {
             for event in snapshot.children {
                 print("hi")
                 self.eventCount += 1
-                self.socialEvent = event as! DataSnapshot
+                let newEvent = event as! DataSnapshot
+                let dict = newEvent.value as! [String : Any]
+                let date = dict["date"] as! String
+                for i in 0..<self.dates.count {
+                    if date < self.dates[i] {
+                        self.socialEvent.insert(newEvent, at: i)
+                        self.dates.insert(date, at: i)
+                        break
+                    }
+                }
+                self.socialEvent.append(newEvent)
+                self.dates.append(date)
             }
+            
             self.initUI()
         })
     }
