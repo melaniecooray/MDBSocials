@@ -78,7 +78,19 @@ class FeedCell: UITableViewCell {
         //posterName.text = "Melanie"
         dateLabel.text = dict["date"] as! String
         let interested = dict["interested"]!
-        numRSVP.text = "Interested: \(interested)"
+        numRSVP.text = "\(interested)"
+        
+        let storage = Storage.storage().reference()
+        let name = dict["name"] as! String
+        let image = storage.child("\(name).jpeg")
+        image.getData(maxSize: 10 * 1024 * 1024) { data, error in
+            if error != nil {
+                self.eventImage.image = UIImage(named: "pleasemyson")
+            } else {
+                print("sup bro")
+                self.eventImage.image = UIImage(data: data!)
+            }
+        }
     }
 
 }

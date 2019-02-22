@@ -29,7 +29,7 @@ extension FeedViewController : UITableViewDataSource, UITableViewDelegate  {
         cell.initCellFrom(size: CGSize(width: view.frame.width, height: view.frame.width + 200))
         //event = read event from database
         //if let event = socialEvent[index] {
-            cell.updateEvent(to: socialEvent[indexPath[1]])
+        cell.updateEvent(to: socialEvent[indexPath[1]])
         //}
         return cell
     }

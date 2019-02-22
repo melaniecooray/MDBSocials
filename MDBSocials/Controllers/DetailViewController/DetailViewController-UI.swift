@@ -50,19 +50,19 @@ extension DetailViewController {
     func setupEventName() {
         eventName = UILabel(frame: CGRect(x: eventImage.frame.minX, y: eventImage.frame.maxY + 10, width: view.frame.width, height: 40))
         eventName.text = "EVENT NAME FROM DATABASE"
-        eventName.textAlignment = .left
+        //eventName.textAlignment = .left
         view.addSubview(eventName)
     }
     
     func setupPosterName() {
-        posterName = UILabel(frame: CGRect(x: eventImage.frame.minX, y: eventName.frame.maxY + 10, width: view.frame.width, height: 20))
+        posterName = UILabel(frame: CGRect(x: eventImage.frame.minX, y: eventName.frame.maxY + 50, width: view.frame.width, height: 20))
         posterName.text = "NAME OF POSTER"
         posterName.textAlignment = .left
         view.addSubview(posterName)
     }
     
     func setupEventDescription() {
-        eventDesc = UILabel(frame: CGRect(x: eventImage.frame.minX, y: posterName.frame.maxY + 10, width: view.frame.width, height: 20))
+        eventDesc = UILabel(frame: CGRect(x: eventImage.frame.minX, y: posterName.frame.maxY + 50, width: view.frame.width, height: 20))
         eventDesc.text = "DESCRIPTION HERE"
         eventDesc.textAlignment = .center
         view.addSubview(eventDesc)
