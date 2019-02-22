@@ -11,14 +11,19 @@ import UIKit
 extension NewSocialViewController {
 
     func initUI() {
-        self.navigationItem.title = "Create Social"
-        self.navigationController?.navigationBar.tintColor = Constants.orange
-        self.view.backgroundColor = Constants.blue
+        displayNavBar()
         displayTitle()
         displayDescription()
         setUpDatePicker()
         displayImageButton()
         displayAddButton()
+    }
+    
+    func displayNavBar() {
+        self.navigationItem.title = "Create Social"
+        self.navigationController?.navigationBar.tintColor = Constants.orange
+        self.view.backgroundColor = Constants.blue
+        self.navigationItem.backBarButtonItem?.title = "Cancel"
     }
     
     func displayTitle() {

@@ -21,10 +21,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self
-        // Do any additional setup after loading the view.
-        
         initUI()
     }
 }
