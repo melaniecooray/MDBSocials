@@ -45,14 +45,21 @@ class FeedCell: UITableViewCell {
         eventName.font = UIFont(name: "Avenir-Heavy", size: 35)
         contentView.addSubview(eventName)
         
-        posterName = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY + 10, width: self.size.width - 50, height: 40))
-        posterName.textAlignment = .left
-        posterName.text = "By: Guy Fieri"
-        posterName.font = UIFont(name: "Avenir-Light", size: 30)
-        contentView.addSubview(posterName)
+        //posterName = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY + 10, width: self.size.width - 50, height: 40))
+        //posterName.textAlignment = .left
+        //posterName.text = "By: Guy Fieri"
+        //posterName.font = UIFont(name: "Avenir-Light", size: 30)
+        //contentView.addSubview(posterName)
+        
+        dateLabel = UILabel(frame: CGRect(x: eventName.frame.minX, y: eventName.frame.maxY + 10, width: self.size.width - 50, height: 40))
+        dateLabel.textAlignment = .left
+        dateLabel.text = "By: Guy Fieri"
+        dateLabel.font = UIFont(name: "Avenir-Light", size: 30)
+        contentView.addSubview(dateLabel)
+        
         
         humanIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        humanIcon.center = CGPoint(x: self.size.width / 2 - 25, y: posterName.frame.maxY + 30)
+        humanIcon.center = CGPoint(x: self.size.width / 2 - 25, y: dateLabel.frame.maxY + 30)
         humanIcon.image = UIImage(named: "humanIcon")
         contentView.addSubview(humanIcon)
         
@@ -68,7 +75,8 @@ class FeedCell: UITableViewCell {
     func updateEvent(to socialEvent : DataSnapshot) {
         let dict = socialEvent.value as! [String : Any]
         eventName.text = dict["name"] as! String
-        posterName.text = "Melanie"
+        //posterName.text = "Melanie"
+        dateLabel.text = dict["date"] as! String
         let interested = dict["interested"]!
         numRSVP.text = "Interested: \(interested)"
     }

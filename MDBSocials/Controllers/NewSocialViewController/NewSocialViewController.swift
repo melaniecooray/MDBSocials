@@ -81,6 +81,7 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
         let eventNode = db.child("events")
         let eventID = eventNode.childByAutoId().key
         db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser?.displayName])
+        //db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser().Name])
         
         let storage = Storage.storage().reference()
         if let data = image.jpegData(compressionQuality: 0.4) {
