@@ -36,7 +36,7 @@ extension NewSocialViewController {
     
     func displayImageButton() {
         imageButton = UIButton(frame: CGRect(x: nameOfEvent.frame.maxX + 20, y: 150, width: view.frame.width/4, height: 70))
-        imageButton.setTitle("Choose Image", for: .normal)
+        imageButton.setTitle("Image", for: .normal)
         imageButton.layer.cornerRadius = 5
         imageButton.setTitleColor(.black, for: .normal)
         imageButton.backgroundColor = .white
@@ -56,7 +56,7 @@ extension NewSocialViewController {
     func setUpDatePicker() {
         datePicker = UIDatePicker()
         datePicker.frame = CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 200)
-        datePicker.center = CGPoint(x: view.frame.width/2, y: eventDescription.frame.maxY + 250)
+        datePicker.center = CGPoint(x: view.frame.width/2, y: eventDescription.frame.maxY + 150)
         datePicker.timeZone = NSTimeZone.local
         datePicker.backgroundColor = .white
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)

@@ -24,15 +24,12 @@ class FeedViewController: UIViewController {
     var picArray : [UIImage] = []
     var eventCount = 0
     var index = 0
+    
+    var clicked : Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let db = Database.database().reference()
-        let storage = Storage.storage().reference()
-        //storage.getData(maxSize: 1000000) { (data, error) in
-        //    let pic = UIImage(data: data)
-        //
-        //})
         let topNode = db.child("events")
         topNode.observe(.value, with: { (snapshot) in
             for event in snapshot.children {

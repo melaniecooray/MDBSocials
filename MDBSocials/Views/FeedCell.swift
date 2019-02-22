@@ -36,7 +36,7 @@ class FeedCell: UITableViewCell {
         
         eventImage = UIImageView(frame: CGRect(x: 0, y: 0, width: self.size.width - 100, height: self.size.width - 100))
         eventImage.center = CGPoint(x: self.size.width / 2, y: eventImage.frame.height / 2 + 50)
-        eventImage.image = UIImage(named: "pleasemyson")
+        //eventImage.image = UIImage(named: "pleasemyson")
         contentView.addSubview(eventImage)
         
         eventName = UILabel(frame: CGRect(x: eventImage.frame.minX, y: eventImage.frame.maxY + 10, width: self.size.width - 50, height: 40))
@@ -85,6 +85,7 @@ class FeedCell: UITableViewCell {
         let image = storage.child("\(name).jpeg")
         image.getData(maxSize: 10 * 1024 * 1024) { data, error in
             if error != nil {
+                print(error)
                 self.eventImage.image = UIImage(named: "pleasemyson")
             } else {
                 print("sup bro")

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailViewController: UIViewController {
 
@@ -19,8 +20,20 @@ class DetailViewController: UIViewController {
     var notSelected : UIImage!
     var selected : UIImage!
     
+    var event : DataSnapshot!
+    var eventID : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+    }
+    
+    @objc func markInterested() {
+        var dict = event.value as! [String : Any]
+        let db = Database.database().reference()
+        var update = dict["interested"] as! Int
+        update = update + 1
+        db.child("events").child(dict["eventID"] as! String).updateChildValues(["interested" : update])
+        
     }
 }

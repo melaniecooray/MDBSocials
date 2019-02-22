@@ -36,6 +36,13 @@ extension FeedViewController : UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //social = Database.socials[indexPath.row]
+        clicked = indexPath[1]
         self.performSegue(withIdentifier: "toDetailsVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultVC = segue.destination as? DetailViewController {
+            resultVC.event = socialEvent[clicked]
+        }
     }
 }
