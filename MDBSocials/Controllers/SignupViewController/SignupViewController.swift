@@ -19,6 +19,8 @@ class SignupViewController: UIViewController {
     
     var userID : String!
     
+    var socialsImage : UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sign Up"

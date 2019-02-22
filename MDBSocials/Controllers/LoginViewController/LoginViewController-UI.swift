@@ -12,15 +12,23 @@ extension LoginViewController {
 
     func initUI() {
         self.view.backgroundColor = Constants.blue
+        displaySocialsImage()
         displayUsername()
         displayPassword()
         displayLogin()
         displaySignUp()
     }
     
+    func displaySocialsImage() {
+        socialsImage = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width - 100, height: 300))
+        socialsImage.center = CGPoint(x: view.frame.width / 2, y: 250)
+        socialsImage.image = UIImage(named: "socialsIcon")
+        view.addSubview(socialsImage)
+    }
+    
     func displayUsername() {
         userName = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 50))
-        userName.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
+        userName.center = CGPoint(x: view.frame.width/2, y: socialsImage.frame.maxY + 35)
         userName.placeholder = " Email:"
         userName.layer.cornerRadius = 15
         userName.backgroundColor = .white
@@ -29,7 +37,7 @@ extension LoginViewController {
     
     func displayPassword() {
         password = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 50))
-        password.center = CGPoint(x: view.frame.width/2, y: userName.frame.maxY + 50)
+        password.center = CGPoint(x: view.frame.width/2, y: userName.frame.maxY + 35)
         password.placeholder = " Password (>6 characters):"
         password.layer.cornerRadius = 15
         password.backgroundColor = .white
@@ -49,11 +57,11 @@ extension LoginViewController {
     
     func displaySignUp() {
         signUpButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width / 2, height: 35))
-        signUpButton.center = CGPoint(x: view.frame.width / 2, y: loginButton.frame.maxY + 100)
+        signUpButton.center = CGPoint(x: view.frame.width / 2, y: loginButton.frame.maxY + 60)
         signUpButton.setTitle("No Account? Sign Up!", for: .normal)
         signUpButton.setTitleColor(.white, for: .normal)
         signUpButton.layer.cornerRadius = 15
-        signUpButton.setTitleColor(.black, for: .normal)
+        signUpButton.setTitleColor(.white, for: .normal)
         signUpButton.backgroundColor = Constants.orange
         signUpButton.addTarget(self, action: #selector(toSignUp), for: .touchUpInside)
         view.addSubview(signUpButton)

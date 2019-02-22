@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     var loginButton : UIButton!
     
     var userID : String!
+    
+    var socialsImage : UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -52,6 +52,15 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @objc func addToFeed() {
+        /*
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in.
+            } else {
+                // No user is signed in.
+            }
+        });
+ */
         guard let eventName = nameOfEvent.text else {
             self.addButton.isUserInteractionEnabled = true
             showError(title: "Information Missing", message: "No Event Name Entered.")
@@ -80,6 +89,7 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
         let db = Database.database().reference()
         let eventNode = db.child("events")
         let eventID = eventNode.childByAutoId().key
+        
         db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser?.displayName])
         
         let storage = Storage.storage().reference()
@@ -92,15 +102,6 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
                 print(metadata)
             })
         }
-        
-        /*
-        let data = image.jpegData(compressionQuality: 0.4)
-        storage.child("images").putData(data!, metadata: nil) { (data, error) in
-            if error != nil {
-                self.showError(title: "Error:", message: "Could not upload image.")
-            }
-        }
-        */
         self.performSegue(withIdentifier: "addedEvent", sender: self)
     }
     
