@@ -50,11 +50,11 @@ class FeedCell: UITableViewCell {
         
     }
     
-    func updateEvent(to socialEvent : DatabaseReference) {
-        print("sup")
-        eventName.text = socialEvent.value(forKey: "name") as? String
-        posterName.text = socialEvent.value(forKey: "host") as? String
-        let interested = socialEvent.value(forKey: "interested") as? String
+    func updateEvent(to socialEvent : DataSnapshot) {
+        let dict = socialEvent.value as! [String : Any]
+        eventName.text = dict["name"] as! String
+        posterName.text = "Melanie"
+        let interested = dict["interested"]!
         numRSVP.text = "Interested: \(interested)"
     }
 
