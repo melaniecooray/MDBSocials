@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     var userID : String!
 
     override func viewDidLoad() {
+        self.title = "MDBSocials"
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //FirebaseApp.configure()
@@ -28,7 +29,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @objc func loginUser() {

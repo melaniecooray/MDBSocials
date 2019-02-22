@@ -13,6 +13,7 @@ extension NewSocialViewController {
     func initUI() {
         self.navigationItem.title = "Create Social"
         self.navigationController?.navigationBar.tintColor = Constants.orange
+        self.view.backgroundColor = Constants.blue
         displayTitle()
         displayDescription()
         setUpDatePicker()
@@ -22,18 +23,18 @@ extension NewSocialViewController {
     
     func displayTitle() {
         nameOfEvent = UITextField(frame: CGRect(x: 25, y: 150, width: view.frame.width/2 + 30, height: 70))
-        nameOfEvent.placeholder = "Name of Event"
+        nameOfEvent.placeholder = " Name of Event:"
         nameOfEvent.layer.cornerRadius = 5
-        nameOfEvent.backgroundColor = Constants.blue
+        nameOfEvent.backgroundColor = .white
         view.addSubview(nameOfEvent)
     }
     
     func displayImageButton() {
         imageButton = UIButton(frame: CGRect(x: nameOfEvent.frame.maxX + 20, y: 150, width: view.frame.width/4, height: 70))
-        imageButton.setTitle("Image", for: .normal)
+        imageButton.setTitle("Choose Image", for: .normal)
         imageButton.layer.cornerRadius = 5
         imageButton.setTitleColor(.black, for: .normal)
-        imageButton.backgroundColor = Constants.blue
+        imageButton.backgroundColor = .white
         imageButton.addTarget(self, action: #selector(uploadImage), for: .touchUpInside)
         view.addSubview(imageButton)
     }
@@ -41,16 +42,16 @@ extension NewSocialViewController {
     func displayDescription() {
         eventDescription = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 200))
         eventDescription.center = CGPoint(x: view.frame.width/2, y: nameOfEvent.frame.maxY + 150)
-        eventDescription.placeholder = "Description"
+        eventDescription.placeholder = " Description:"
         eventDescription.layer.cornerRadius = 15
-        eventDescription.backgroundColor = Constants.blue
+        eventDescription.backgroundColor = .white
         view.addSubview(eventDescription)
     }
     
     func setUpDatePicker() {
         datePicker = UIDatePicker()
-        datePicker.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
-        datePicker.center = CGPoint(x: view.frame.width/2, y: eventDescription.frame.maxY + 100)
+        datePicker.frame = CGRect(x: 0, y: 0, width: view.frame.width - 50, height: 200)
+        datePicker.center = CGPoint(x: view.frame.width/2, y: eventDescription.frame.maxY + 250)
         datePicker.timeZone = NSTimeZone.local
         datePicker.backgroundColor = .white
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
@@ -59,11 +60,11 @@ extension NewSocialViewController {
     
     func displayAddButton() {
         addButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width/2, height: 30))
-        addButton.center = CGPoint(x: view.frame.width/2, y: datePicker.frame.maxY + 50)
+        addButton.center = CGPoint(x: view.frame.width/2, y: datePicker.frame.maxY + 65)
         addButton.setTitle("Post", for: .normal)
         addButton.layer.cornerRadius = 10
         addButton.setTitleColor(.black, for: .normal)
-        addButton.backgroundColor = Constants.blue
+        addButton.backgroundColor = Constants.orange
         addButton.addTarget(self, action: #selector(addToFeed), for: .touchUpInside)
         view.addSubview(addButton)
     }
