@@ -23,7 +23,7 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.tintColor = Constants.orange
-        self.title = "Sign Up!"
+        self.title = "Sign Up"
         
         // Do any additional setup after loading the view.
         
