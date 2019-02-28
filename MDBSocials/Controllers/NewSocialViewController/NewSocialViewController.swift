@@ -37,6 +37,8 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
         self.image = info[.originalImage] as? UIImage
         imagePicker.dismiss(animated: true, completion: nil)
         //guard let self.image = info[]
+        imageButton.setTitle("✓", for: .normal)
+        imageButton.backgroundColor = .green
         
     }
     
@@ -47,6 +49,10 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
+        let currentDate = Date()
+        if currentDate > sender.date {
+            showError(title: "Error:", message: "Selected date cannot be earlier than current date")
+        }
         selectedDate = dateFormatter.string(from: sender.date)
         print("Selected value \(selectedDate)")
     }
@@ -80,6 +86,7 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
         guard let eventDate = selectedDate else {
+            
             self.addButton.isUserInteractionEnabled = true
             showError(title: "Information Missing", message: "No Event Date Selected.")
             return
@@ -90,7 +97,7 @@ class NewSocialViewController: UIViewController, UIImagePickerControllerDelegate
         let eventNode = db.child("events")
         let eventID = eventNode.childByAutoId().key
         
-        db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser?.uid, "eventID" : eventID])
+        db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser?.uid, "eventID" : eventID, "image" : "\(eventName).jpeg"])
         //db.child("events").child(eventID!).setValue(["name" : eventName, "description" : eventDesc, "date" : eventDate, "interested" : 1, "host" : Auth.auth().currentUser().Name])
         
         let storage = Storage.storage().reference()

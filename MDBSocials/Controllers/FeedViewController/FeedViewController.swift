@@ -14,11 +14,12 @@ class FeedViewController: UIViewController {
     var tableView : UITableView!
     var cellSize : CGSize!
     
-    var addEventButton : UIButton!
+    var addEventButton : UIBarButtonItem!
     var signOutButton: UIBarButtonItem!
     
     var userID : String!
     
+    var events : [Event] = []
     var socialEvent : [DataSnapshot] = []
     var dates : [String] = []
     var picArray : [UIImage] = []
@@ -38,9 +39,11 @@ class FeedViewController: UIViewController {
                 let newEvent = event as! DataSnapshot
                 let dict = newEvent.value as! [String : Any]
                 let date = dict["date"] as! String
+                let event1 = Event(name: dict["name"] as! String, image: dict["image"] as! String, description: dict["description"] as! String, date: dict["date"] as! String, eventID: dict["eventID"] as! String, interested: dict["interested"] as! Int)
                 for i in 0..<self.dates.count {
                     if date < self.dates[i] {
                         self.socialEvent.insert(newEvent, at: i)
+                        self.events.insert(event1, at: i)
                         self.dates.insert(date, at: i)
                         break
                     }

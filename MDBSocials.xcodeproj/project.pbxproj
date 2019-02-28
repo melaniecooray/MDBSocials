@@ -10,6 +10,7 @@
 		6609CF301C7AFD66A450CB2B /* Pods_MDBSocials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B76BDAC63C5D2CAF221765 /* Pods_MDBSocials.framework */; };
 		7B4BBA30221DF27100542C10 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BBA2F221DF27100542C10 /* DetailViewController.swift */; };
 		7B4BBA32221DF2BE00542C10 /* NewSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BBA31221DF2BE00542C10 /* NewSocialViewController.swift */; };
+		7B4F80692227471D0044B9BC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F80682227471D0044B9BC /* Event.swift */; };
 		7B97052322152572007D805C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97052222152572007D805C /* AppDelegate.swift */; };
 		7B97052522152572007D805C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97052422152572007D805C /* LoginViewController.swift */; };
 		7B97052822152572007D805C /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -47,6 +48,7 @@
 		45E296B9E2F829FF85A90CED /* Pods-MDBSocialsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDBSocialsUITests.release.xcconfig"; path = "Target Support Files/Pods-MDBSocialsUITests/Pods-MDBSocialsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B4BBA2F221DF27100542C10 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7B4BBA31221DF2BE00542C10 /* NewSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialViewController.swift; sourceTree = "<group>"; };
+		7B4F80682227471D0044B9BC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Event.swift; path = MDBSocials/Models/Event.swift; sourceTree = SOURCE_ROOT; };
 		7B97051F22152572007D805C /* MDBSocials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBSocials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B97052222152572007D805C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B97052422152572007D805C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7B4F8067222746F10044B9BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B4F80682227471D0044B9BC /* Event.swift */,
+			);
+			name = Models;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		7B97051622152572007D805C = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +139,7 @@
 		7B97052122152572007D805C /* MDBSocials */ = {
 			isa = PBXGroup;
 			children = (
+				7B4F8067222746F10044B9BC /* Models */,
 				8C422A2A221E8E29008A87F5 /* Base.lproj */,
 				8CC842A6221DEA0E00DF42B7 /* Resources */,
 				8CC842A3221DE9E800DF42B7 /* Views */,
@@ -494,6 +506,7 @@
 				8C422A2D221EA813008A87F5 /* SignupViewController-UI.swift in Sources */,
 				7B970576221A0533007D805C /* SignupViewController.swift in Sources */,
 				7B97052522152572007D805C /* LoginViewController.swift in Sources */,
+				7B4F80692227471D0044B9BC /* Event.swift in Sources */,
 				7B4BBA32221DF2BE00542C10 /* NewSocialViewController.swift in Sources */,
 				7B4BBA30221DF27100542C10 /* DetailViewController.swift in Sources */,
 				7B97052322152572007D805C /* AppDelegate.swift in Sources */,

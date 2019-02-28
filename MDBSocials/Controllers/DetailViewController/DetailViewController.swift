@@ -13,10 +13,17 @@ class DetailViewController: UIViewController {
 
     var eventImage : UIImageView!
     var eventName : UILabel!
+    
+    var dateLabel : UILabel!
+    
     var posterName : UILabel!
+    
     var eventDesc : UILabel!
+    
     var numRSVP : UILabel!
+    
     var interestButton : UIButton!
+    
     var notSelected : UIImage!
     var selected : UIImage!
     

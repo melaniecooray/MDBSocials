@@ -14,6 +14,7 @@ extension DetailViewController {
     func initUI() {
         setupNavBar()
         setupEventName()
+        setupDate()
         setupImage()
         //setupPosterName()
         setupEventDescription()
@@ -25,9 +26,19 @@ extension DetailViewController {
         self.navigationController?.navigationBar.tintColor = Constants.orange
     }
     
+    func setupDate() {
+        dateLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 100))
+        dateLabel.center = CGPoint(x: view.frame.width/2, y: eventName.frame.maxY + 50)
+        var dict = event.value as! [String : Any]
+        dateLabel.text = dict["date"] as! String
+        dateLabel.font = UIFont(name: "Avenir-Light", size: 25)
+        dateLabel.textAlignment = .center
+        view.addSubview(dateLabel)
+    }
+    
     func setupImage() {
         eventImage = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width - 50, height: view.frame.width - 50))
-        eventImage.center = CGPoint(x: view.frame.width / 2, y: eventName.frame.maxY + 250)
+        eventImage.center = CGPoint(x: view.frame.width / 2, y: dateLabel.frame.maxY + 200)
         let storage = Storage.storage().reference()
         var dict = event.value as! [String : Any]
         let name = dict["name"] as! String
@@ -63,7 +74,7 @@ extension DetailViewController {
         eventName.center = CGPoint(x: view.frame.width/2, y: 150)
         var dict = event.value as! [String : Any]
         eventName.text = dict["name"] as! String
-        eventName.font = UIFont(name: "Avenir-Light", size: 70)
+        eventName.font = UIFont(name: "Avenir-Bold", size: 100)
         eventName.textAlignment = .center
         view.addSubview(eventName)
     }
@@ -80,7 +91,7 @@ extension DetailViewController {
         eventDesc.center = CGPoint(x: view.frame.width/2, y: 700)
         var dict = event.value as! [String : Any]
         eventDesc.text = dict["description"] as! String
-        eventName.font = UIFont(name: "Avenir-Light", size: 25)
+        eventName.font = UIFont(name: "Avenir-Light", size: 35)
         eventDesc.textAlignment = .center
         view.addSubview(eventDesc)
     }

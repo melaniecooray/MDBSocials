@@ -112,11 +112,4 @@ class SignupViewController: UIViewController {
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toFeedVC" {
-            let destination = segue.destination as! FeedViewController
-            destination.userID = userID
-        }
-    }
 }

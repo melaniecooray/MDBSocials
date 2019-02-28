@@ -35,10 +35,11 @@ extension FeedViewController {
     func setupSignOutButton() {
         signOutButton = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut))
         //self.navigationItem.rightBarButtonItem = signOutButton
-        self.navigationItem.setRightBarButton(signOutButton, animated: true)
+        self.navigationItem.setLeftBarButton(signOutButton, animated: true)
     }
     
     func setupAddEventButton() {
+        /*
         addEventButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         addEventButton.center = CGPoint(x: view.frame.width / 2, y: view.frame.height - 65)
         addEventButton.layer.cornerRadius = 0.5 * addEventButton.bounds.size.width
@@ -46,6 +47,9 @@ extension FeedViewController {
         addEventButton.addTarget(self, action: #selector(toNew), for: .touchUpInside)
         addEventButton.setBackgroundImage(UIImage(named: "addIcon2"), for: .normal)
         view.addSubview(addEventButton)
+        */
+        addEventButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(toNew))
+        self.navigationItem.setRightBarButton(addEventButton, animated: true)
     }
     
     @objc func signOut() {
