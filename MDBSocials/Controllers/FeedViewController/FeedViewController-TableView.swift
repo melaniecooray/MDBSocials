@@ -37,6 +37,7 @@ extension FeedViewController : UITableViewDataSource, UITableViewDelegate  {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //social = Database.socials[indexPath.row]
         clicked = indexPath[1]
+        tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "toDetailsVC", sender: self)
     }
     

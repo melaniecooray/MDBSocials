@@ -60,6 +60,7 @@ extension SignupViewController {
         password.placeholder = " Password:"
         password.layer.cornerRadius = 15
         password.backgroundColor = .white
+        password.isSecureTextEntry = true
         view.addSubview(password)
     }
     

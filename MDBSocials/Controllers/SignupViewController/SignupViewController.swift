@@ -78,6 +78,9 @@ class SignupViewController: UIViewController {
             return
         }
         
+        signupButton.isEnabled = false
+        signupButton.backgroundColor = .gray
+        signupButton.setTitle("Loading...", for: .normal)
         
         Auth.auth().createUser(withEmail: userEmail!, password: userPassword!, completion: { (user, error) in
             if let error = error {

@@ -12,6 +12,7 @@ extension LoginViewController {
 
     func initUI() {
         self.view.backgroundColor = Constants.blue
+        displayTitle()
         displaySocialsImage()
         displayUsername()
         displayPassword()
@@ -19,9 +20,17 @@ extension LoginViewController {
         displaySignUp()
     }
     
+    func displayTitle() {
+        mdbsocialsLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width/2, height: 100))
+        mdbsocialsLabel.center = CGPoint(x: view.frame.width/2, y: 100)
+        mdbsocialsLabel.text = "MDB Socials"
+        mdbsocialsLabel.font = UIFont(name: "Avenir-Heavy", size: 35)
+        view.addSubview(mdbsocialsLabel)
+    }
+    
     func displaySocialsImage() {
         socialsImage = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width - 100, height: 300))
-        socialsImage.center = CGPoint(x: view.frame.width / 2, y: 250)
+        socialsImage.center = CGPoint(x: view.frame.width / 2, y: mdbsocialsLabel.frame.maxY + 150)
         socialsImage.image = UIImage(named: "socialsIcon")
         view.addSubview(socialsImage)
     }

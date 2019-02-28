@@ -20,15 +20,24 @@ class LoginViewController: UIViewController {
     var userID : String!
     
     var socialsImage : UIImageView!
+    
+    var mdbsocialsLabel : UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "MDBSocials"
-        initUI()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:")))
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if let user = user {
+                self.alreadySignedIn()
+            } else {
+                self.initUI()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @objc func loginUser() {
@@ -54,6 +63,10 @@ class LoginViewController: UIViewController {
             showError(title: "Information Missing", message: "No Password Entered")
             return
         }
+        
+        loginButton.isEnabled = false
+        loginButton.backgroundColor = .gray
+        loginButton.setTitle("Loading...", for: .normal)
 
         Auth.auth().signIn(withEmail: userUsername!, password: userPassword!, completion: { (user, error) in
             if let error = error {
@@ -73,6 +86,10 @@ class LoginViewController: UIViewController {
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func alreadySignedIn () {
+        performSegue(withIdentifier: "toFeedVC", sender: self)
     }
 }
 

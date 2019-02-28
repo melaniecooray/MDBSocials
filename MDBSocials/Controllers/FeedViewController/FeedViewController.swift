@@ -30,6 +30,14 @@ class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+        socialEvent = []
+        dates = []
+        events = []
+        eventCount = 0
         let db = Database.database().reference()
         let topNode = db.child("events")
         topNode.observe(.value, with: { (snapshot) in
@@ -54,9 +62,5 @@ class FeedViewController: UIViewController {
             
             self.initUI()
         })
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
     }
 }
